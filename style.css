@@ -1,0 +1,152 @@
+body {
+    background-color: #f7f6f4;
+    font-family: Pretendard;
+    letter-spacing: -0.7px;
+    margin: 0 auto;
+    
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    
+    animation: fadein ease 1.75s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+::selection {
+    background-color: #292929;
+    color: #f7f6f4;
+}
+
+::-moz-selection {
+    background-color: #292929;
+    color: #f7f6f4;
+}
+
+::-webkit-selection {
+    background-color: #292929;
+    color: #f7f6f4;
+}
+
+section {
+    height: 100dvh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+h1 {
+    font-size: 56px;
+    font-weight: bold;
+    line-height: 52px;
+    margin: 0;
+}
+
+p {
+    font-size: 21px;
+    line-height: 21px;
+    margin: 0;
+}
+
+#profile {
+    display: flex;
+    width: 430px;
+    justify-content: space-between;
+}
+
+#avatar {
+    border-radius: 100%;
+    width: 130px;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#shortcut {
+    font-size: 0;
+}
+
+.icon_link {
+    text-decoration: none;
+}
+
+.icon_logo {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.7rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #292929;
+    }
+
+    ::selection {
+        background-color: #f7f6f4;
+        color: #292929;
+    }
+    
+    ::-moz-selection {
+        background-color: #f7f6f4;
+        color: #292929;
+    }
+    
+    ::-webkit-selection {
+        background-color: #f7f6f4;
+        color: #292929;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    #profile {
+        width: auto;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 240px;
+    }
+
+    #avatar {
+        width: 140px;
+    }
+    
+    #content {
+        display: contents;
+    }
+
+    p {
+        display: none;
+    }
+
+    #shortcut {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+
+    .icon_logo {
+        width: 16px;
+        height: 16px;
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 53px;
+        line-height: 46px;
+    }
+}
