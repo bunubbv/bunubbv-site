@@ -1,5 +1,6 @@
 body {
     background-color: #f7f6f4;
+    color: #292929;
     font-family: Pretendard;
     letter-spacing: -0.7px;
     margin: 0 auto;
@@ -49,25 +50,27 @@ section {
 h1 {
     font-size: 56px;
     font-weight: bold;
-    line-height: 52px;
+    line-height: 0.9em;
     margin: 0;
 }
 
 p {
     font-size: 21px;
-    line-height: 21px;
+    line-height: 0.9em;
     margin: 0;
 }
 
 #profile {
     display: flex;
-    width: 430px;
+    width: 380px;
     justify-content: space-between;
 }
 
 #avatar {
     border-radius: 100%;
     width: 130px;
+    outline: 2px solid #292929;
+    outline-offset: -2px;
 }
 
 #content {
@@ -78,21 +81,33 @@ p {
 
 #shortcut {
     font-size: 0;
+    height: 26px;
+    display: flex;
+    align-items: flex-end;
 }
 
 .icon_link {
     text-decoration: none;
+    margin-right: 0.7rem;
+}
+
+.icon_link_s_end {
+    margin-right: 0.7rem;
+}
+
+.icon_link_l_end {
+    margin-right: 0;
 }
 
 .icon_logo {
     width: 24px;
     height: 24px;
-    margin-right: 0.7rem;
 }
 
 @media (prefers-color-scheme: dark) {
     body {
         background-color: #292929;
+        color: #f7f6f4;
     }
 
     ::selection {
@@ -109,23 +124,22 @@ p {
         background-color: #f7f6f4;
         color: #292929;
     }
+
+    #avatar {
+        outline: 2px solid #f7f6f4;
+        outline-offset: -2px;
+    }
 }
 
 @media screen and (max-width: 512px) {
     #profile {
         width: auto;
         flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        height: 240px;
+        height: 230px;
     }
 
-    #avatar {
-        width: 140px;
-    }
-    
-    #content {
-        display: contents;
+    h1 {
+        display: none;
     }
 
     p {
@@ -133,20 +147,19 @@ p {
     }
 
     #shortcut {
-        display: flex;
-        justify-content: space-around;
+        width: 130px;
+        height: 90px;
+        flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
-        width: 100%;
     }
 
     .icon_logo {
-        width: 16px;
-        height: 16px;
-        margin: 0;
+        width: 30px;
+        height: 30px;
     }
 
-    h1 {
-        font-size: 53px;
-        line-height: 46px;
+    .icon_link_s_end {
+        margin-right: 0;
     }
 }
